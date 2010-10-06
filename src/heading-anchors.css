@@ -1,0 +1,13 @@
+
+.heading-anchor a:after { content: '¶'; }
+.heading-anchor a {
+    color: inherit;
+    text-decoration: inherit;
+    margin-left: 0.3em;
+    opacity: 0;
+}
+.heading-anchor a:hover,
+.heading-anchor a:focus  { opacity: 0.5 !important;}
+.heading-anchor a:active { opacity: 0.75 !important; }
+
+.heading-anchor:hover a { opacity: 0.25; }
