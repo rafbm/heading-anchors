@@ -10,6 +10,7 @@ Browser support
 
 Heading Anchors works in the browsers you care about, that is, IE9 and all others.
 
+
 Known issues
 ------------
 
