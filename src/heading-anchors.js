@@ -26,6 +26,11 @@
             titleElement.id = '-'+ niceTitle;
             titleElement.appendChild( anchor );
         });
+        
+        var headingInHash = document.getElementById( window.location.hash.substr(1) )
+        if ( headingInHash ) {
+            window.scrollTo( 0, headingInHash.offsetTop );
+        }
     
     };
 

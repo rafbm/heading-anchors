@@ -15,4 +15,4 @@ Known issues
 ------------
 
 - There currently are some quirks in Firefox. Both 3.6 and 4.0. Go figure…
-- Actually, creation of anchors is working but "handling" isn’t yet. By "handling" I mean scrolling at the right heading at the first load of the page.
+- <del>Actually, creation of anchors is working but "handling" isn’t yet. By "handling" I mean scrolling at the right heading at the first load of the page.</del> <ins>Now it does!</ins>
