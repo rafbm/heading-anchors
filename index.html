@@ -96,7 +96,7 @@
 				var nice = function( notNiceString ) {
 					return notNiceString.replace('’','').replace(/[^a-z0-9]+/ig, '-');
 				};
-
+				
 				var $ = function( selector ) {
 					var domElements   = document.querySelectorAll( selector ),
 						elementsArray = [];
@@ -105,18 +105,14 @@
 					}
 					return elementsArray;
 				};
-
+				
 				$('h2, h3, h4, h5, h6').forEach(function( titleElement ) {
-
+					
 					var anchor    = document.createElement('a'),
 						niceTitle = nice( titleElement.innerHTML );
-
+						
 					anchor.href = '#-'+ niceTitle;
 					
-					anchor.addEventListener('click', function() {
-						this.focus();
-					}, false);
-
 					titleElement.className += ' heading-anchor';
 					titleElement.id = '-'+ niceTitle;
 					titleElement.appendChild( anchor );
