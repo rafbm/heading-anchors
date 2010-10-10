@@ -1,6 +1,6 @@
 window.HeadingAnchors = {
 
-    init: function() {
+    init: function( customHeadingsSelector ) {
         
         if ( 'querySelectorAll' in document ) {
             
@@ -19,7 +19,9 @@ window.HeadingAnchors = {
 
             var niceHeadings = {};
 
-            $('h2, h3, h4, h5, h6').forEach(function( headingElement ) {
+            $( customHeadingsSelector ?
+               customHeadingsSelector :
+               'h2, h3, h4, h5, h6' ).forEach(function( headingElement ) {
 
                 var anchor    = document.createElement('a'),
                     niceHeading = nice( headingElement.innerHTML );
