@@ -36,7 +36,7 @@ window.HeadingAnchors = {
                     niceHeadings[niceHeading] = 2;
                 }
 
-                headingElement.className += ' heading-anchor';
+                headingElement.className += headingElement.className ? ' heading-anchor' : 'heading-anchor';
                 headingElement.appendChild( anchor );
             });
 
