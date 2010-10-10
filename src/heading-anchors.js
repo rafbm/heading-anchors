@@ -17,11 +17,15 @@ window.HeadingAnchors = {
                 return notNiceString.replace('’','').replace(/[^a-z0-9]+/ig, '-');
             };
 
-            var niceHeadings = {};
-
-            $( customHeadingsSelector ?
-               customHeadingsSelector :
-               'h2, h3, h4, h5, h6' ).forEach(function( headingElement ) {
+            var niceHeadings = {}, headingsSelector;
+            
+            if ( typeof customHeadingsSelector == "string" && customHeadingsSelector.length ) {
+                headingsSelector = customHeadingsSelector;
+            } else {
+                headingsSelector = 'h2, h3, h4, h5, h6';
+            }
+            
+            $( headingsSelector ).forEach(function( headingElement ) {
 
                 var anchor    = document.createElement('a'),
                     niceHeading = nice( headingElement.innerHTML );
