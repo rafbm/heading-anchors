@@ -15,15 +15,23 @@
     
     window.onload = function() {
         
+        var niceTitles = {};
         $('h2, h3, h4, h5, h6').forEach(function( titleElement ) {
             
             var anchor    = document.createElement('a'),
                 niceTitle = nice( titleElement.innerHTML );
             
-            anchor.href = '#-'+ niceTitle;
+            if ( niceTitle in niceTitles ) {
+                anchor.href = '#-'+ niceTitle +'-'+ niceTitles[niceTitle];
+                titleElement.id = '-'+ niceTitle +'-'+ niceTitles[niceTitle];
+                niceTitles[niceTitle] = niceTitles[niceTitle] += 1;
+            } else {
+                anchor.href = '#-'+ niceTitle;
+                titleElement.id = '-'+ niceTitle;
+                niceTitles[niceTitle] = 2;
+            }
             
             titleElement.className += ' heading-anchor';
-            titleElement.id = '-'+ niceTitle;
             titleElement.appendChild( anchor );
         });
         
