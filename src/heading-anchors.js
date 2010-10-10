@@ -13,7 +13,7 @@
         return elementsArray;
     };
     
-    window.onload = function() {
+    window.addEventListener('load', function() {
         
         var niceHeadings = {};
         $('h2, h3, h4, h5, h6').forEach(function( titleElement ) {
@@ -40,6 +40,6 @@
             window.scrollTo( 0, headingInHash.offsetTop );
         }
     
-    };
+    }, false);
 
 })();
