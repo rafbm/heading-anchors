@@ -15,20 +15,20 @@
     
     window.onload = function() {
         
-        var niceTitles = {};
+        var niceHeadings = {};
         $('h2, h3, h4, h5, h6').forEach(function( titleElement ) {
             
             var anchor    = document.createElement('a'),
-                niceTitle = nice( titleElement.innerHTML );
+                niceHeading = nice( titleElement.innerHTML );
             
-            if ( niceTitle in niceTitles ) {
-                anchor.href = '#-'+ niceTitle +'-'+ niceTitles[niceTitle];
-                titleElement.id = '-'+ niceTitle +'-'+ niceTitles[niceTitle];
-                niceTitles[niceTitle] = niceTitles[niceTitle] += 1;
+            if ( niceHeading in niceHeadings ) {
+                anchor.href = '#-'+ niceHeading +'-'+ niceHeadings[niceHeading];
+                titleElement.id = '-'+ niceHeading +'-'+ niceHeadings[niceHeading];
+                niceHeadings[niceHeading] = niceHeadings[niceHeading] += 1;
             } else {
-                anchor.href = '#-'+ niceTitle;
-                titleElement.id = '-'+ niceTitle;
-                niceTitles[niceTitle] = 2;
+                anchor.href = '#-'+ niceHeading;
+                titleElement.id = '-'+ niceHeading;
+                niceHeadings[niceHeading] = 2;
             }
             
             titleElement.className += ' heading-anchor';
