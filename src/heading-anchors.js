@@ -37,8 +37,10 @@ window.HeadingAnchors = {
             $( headingsSelector ).forEach(function( headingElement ) {
 
                 var anchor    = document.createElement('a'),
-                    niceHeading = nice( headingElement.innerHTML );
+                    niceHeading = nice( headingElement.innerHTML.replace(/<([^ ]+)[^<>]*>([^<>]*)<\/\1>/ig, '$2') );
 
+                anchor.className = 'heading-anchor';
+                
                 if ( niceHeading in niceHeadings ) {
                     anchor.href = '#-'+ niceHeading +'-'+ niceHeadings[niceHeading];
                     headingElement.id = '-'+ niceHeading +'-'+ niceHeadings[niceHeading];
@@ -49,7 +51,6 @@ window.HeadingAnchors = {
                     niceHeadings[niceHeading] = 2;
                 }
 
-                headingElement.className += headingElement.className ? ' heading-anchor' : 'heading-anchor';
                 headingElement.appendChild( anchor );
             });
 
