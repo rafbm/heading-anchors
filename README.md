@@ -2,17 +2,20 @@
 Heading Anchors
 ===============
 
-Heading Anchors is a self-contained, library-agnostic chunk of JavaScript code that creates and handles "¶" anchors for headings on a web page.
+Heading Anchors automatically creates and handles "¶" anchors on a web page.
 
 
-Browser support
----------------
+Features
+--------
+- Handles multiple identical headings nicely.
+- Has a great default selector that can be overwritten.
+- Doesn’t add any extra "¶" to the clipboard, because it uses `content: '¶'`.
+- Executes JavaScript at page load only, so no tiny bit of CPU is wasted when links are hovered and clicked.
+- Demonstrates no love at all for IE 6 and 7… yet doesn’t crash them.
 
-Heading Anchors works in the browsers you care about, that is, IE9 and all others.
 
-
-Known issues
-------------
-
-- There currently are some quirks in Firefox. Both 3.6 and 4.0. Go figure…
-- <del>Actually, creation of anchors is working but "handling" isn’t yet. By "handling" I mean scrolling at the right heading at the first load of the page.</del> <ins>Now it does!</ins>
+Usage
+-----
+- Copy and paste the content of `heading-anchors.js` and `heading-anchors.css` anywhere in your JavaScript and CSS files.
+- Call `HeadingAnchors.init()` on page load and pass it a selector string if the default `'h2, h3, h4, h5, h6'` doesn’t fit you needs.
+- Tweet this URL: <http://github.com/rafBM/heading-anchors>. ☺
