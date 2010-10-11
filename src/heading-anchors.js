@@ -37,7 +37,7 @@ window.HeadingAnchors = {
             $( headingsSelector ).forEach(function( headingElement ) {
 
                 var anchor    = document.createElement('a'),
-                    niceHeading = nice( headingElement.innerHTML.replace(/<([^ ]+)[^<>]*>([^<>]*)<\/\1>/ig, '$2') );
+                    niceHeading = nice( headingElement.id ? headingElement.id : headingElement.innerHTML.replace(/<([^ ]+)[^<>]*>([^<>]*)<\/\1>/ig, '$2') );
 
                 anchor.className = 'heading-anchor';
                 
