@@ -1,3 +1,12 @@
+/*
+ *  Heading Anchors v1.0
+ *  Copyright (c) 2010 Rafaël Blais Masson <http://twitter.com/rafBM>
+ *
+ *  Freely distributable under the terms of the MIT license.
+ *  <http://github.com/rafBM/heading-anchors>
+ *
+ */
+
 window.HeadingAnchors = {
 
     init: function( customHeadingsSelector ) {
