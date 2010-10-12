@@ -19,6 +19,3 @@ a.heading-anchor:focus  { opacity: 0.5 !important; }
 a.heading-anchor:active { opacity: 0.75 !important; }
 
 :hover > a.heading-anchor { opacity: 0.25; }
-
-/* test */
-/* test 2 */
