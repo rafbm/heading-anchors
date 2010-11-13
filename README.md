@@ -2,7 +2,7 @@
 Heading Anchors
 ===============
 
-Heading Anchors automatically creates and handles “¶” anchors on a web page.
+Heading Anchors automatically creates and handles “¶” anchors on a web page. As seen on [Google Code](http://code.google.com/p/zen-coding/), [Trac](http://trac.cyberduck.ch/), etc.
 
 
 Features
