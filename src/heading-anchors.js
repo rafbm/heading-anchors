@@ -23,7 +23,7 @@ window.HeadingAnchors = {
             };
 
             var nice = function( notNiceString ) {
-                return notNiceString.replace('’','').replace(/[^a-z0-9]+/ig, '-');
+                return notNiceString.replace(/['’]/,'').replace(/[^a-z0-9]+/ig, '-');
             };
 
             var niceHeadings = {}, headingsSelector;
