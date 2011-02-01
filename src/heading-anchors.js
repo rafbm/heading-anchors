@@ -42,14 +42,14 @@ window.HeadingAnchors = {
                 
                 anchor.className = 'heading-anchor';
                 
-                if ( niceHeading in niceHeadings ) {
-                    anchor.href = '#'+ niceHeading +'-'+ niceHeadings[niceHeading];
-                    headingElement.id = niceHeading +'-'+ niceHeadings[niceHeading];
-                    niceHeadings[niceHeading] = niceHeadings[niceHeading] += 1;
+                if ( niceHeadings[ niceHeading ] ) {
+                    anchor.href = '#'+ niceHeading +'-'+ niceHeadings[ niceHeading ];
+                    headingElement.id = niceHeading +'-'+ niceHeadings[ niceHeading ];
+                    niceHeadings[ niceHeading ] = niceHeadings[ niceHeading ] += 1;
                 } else {
                     anchor.href = '#'+ niceHeading;
                     headingElement.id = niceHeading;
-                    niceHeadings[niceHeading] = 2;
+                    niceHeadings[ niceHeading ] = 2;
                 }
                 
                 headingElement.appendChild( anchor );
