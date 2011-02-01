@@ -53,6 +53,8 @@ window.HeadingAnchors = {
                     niceHeadings[ niceHeading ] = 2;
                 }
                 
+                anchor.innerHTML = '<span>¶</span>';
+                headingElement.innerHTML += ' ';
                 headingElement.appendChild( anchor );
             });
             
