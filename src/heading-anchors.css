@@ -7,15 +7,15 @@
  *
  */
 
-a.heading-anchor:after { content: '¶'; }
+a.heading-anchor:hover,
+a.heading-anchor:focus  { opacity: 0.5  !important; }
+a.heading-anchor:active { opacity: 0.75 !important; }
 a.heading-anchor {
     color: inherit;
     text-decoration: inherit;
     margin-left: 0.3em;
     opacity: 0;
 }
-a.heading-anchor:hover,
-a.heading-anchor:focus  { opacity: 0.5 !important; }
-a.heading-anchor:active { opacity: 0.75 !important; }
+a.heading-anchor:after { content: '¶'; }
 
 :hover > a.heading-anchor { opacity: 0.25; }
