@@ -11,13 +11,14 @@ window.HeadingAnchors = {
 
     init: function( customHeadingsSelector ) {
         
-        if ( 'querySelectorAll' in document ) {
+        if ( document.querySelectorAll ) {
             
             var $ = function( selector ) {
                 var domElements   = document.querySelectorAll( selector ),
                     elementsArray = [];
-                for ( var i = 0; i < domElements.length; i++ ) {
-                    elementsArray.push( domElements[i] );
+                var e = domElements.length;
+                while (e--) {
+                    elementsArray.push( domElements[e] );
                 }
                 return elementsArray;
             };
@@ -36,7 +37,7 @@ window.HeadingAnchors = {
             
             $( headingsSelector ).forEach(function( headingElement ) {
                 
-                var anchor    = document.createElement('a'),
+                var anchor      = document.createElement('a'),
                     niceHeading = nice( headingElement.id ? headingElement.id : headingElement.innerHTML.replace(/<([^ ]+)[^<>]*>([^<>]*)<\/\1>/ig, '$2') );
                 
                 anchor.className = 'heading-anchor';
