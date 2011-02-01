@@ -16,8 +16,9 @@ window.HeadingAnchors = {
             var $ = function( selector ) {
                 var domElements   = document.querySelectorAll( selector ),
                     elementsArray = [];
-                var e = domElements.length;
-                while (e--) {
+                var domElementCount = domElements.length,
+                    e = 0;
+                for (; e < domElementCount; e++) {
                     elementsArray.push( domElements[e] );
                 }
                 return elementsArray;
