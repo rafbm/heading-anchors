@@ -1,7 +1,7 @@
 /*
  *  Heading Anchors v1.0
  *  Copyright (c) 2010 Rafaël Blais Masson <http://twitter.com/rafBM>
- *
+ *  
  *  Freely distributable under the terms of the MIT license.
  *  <http://github.com/rafBM/heading-anchors>
  *
@@ -21,11 +21,11 @@ window.HeadingAnchors = {
                 }
                 return elementsArray;
             };
-
+            
             var nice = function( notNiceString ) {
                 return notNiceString.replace(/['’]/,'').replace(/[^a-z0-9]+/ig, '-');
             };
-
+            
             var niceHeadings = {}, headingsSelector;
             
             if ( typeof customHeadingsSelector == "string" && customHeadingsSelector.length ) {
@@ -35,10 +35,10 @@ window.HeadingAnchors = {
             }
             
             $( headingsSelector ).forEach(function( headingElement ) {
-
+                
                 var anchor    = document.createElement('a'),
                     niceHeading = nice( headingElement.id ? headingElement.id : headingElement.innerHTML.replace(/<([^ ]+)[^<>]*>([^<>]*)<\/\1>/ig, '$2') );
-
+                
                 anchor.className = 'heading-anchor';
                 
                 if ( niceHeading in niceHeadings ) {
@@ -50,15 +50,15 @@ window.HeadingAnchors = {
                     headingElement.id = niceHeading;
                     niceHeadings[niceHeading] = 2;
                 }
-
+                
                 headingElement.appendChild( anchor );
             });
-
+            
             var headingInHash = document.getElementById( window.location.hash.substr(1) )
             if ( headingInHash ) {
                 window.scrollTo( 0, headingInHash.offsetTop );
             }
-            
+        
         }
     
     }
