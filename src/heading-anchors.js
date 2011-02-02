@@ -54,7 +54,6 @@ window.HeadingAnchors = {
                 }
                 
                 anchor.innerHTML = '<span>¶</span>';
-                headingElement.innerHTML += ' ';
                 headingElement.appendChild( anchor );
             });
             
