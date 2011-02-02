@@ -16,6 +16,7 @@ a.heading-anchor {
     color: inherit;
     text-decoration: inherit;
     opacity: 0;
+    margin-left: 0.3em;
 }
 a.heading-anchor:after { content: '¶'; }
 

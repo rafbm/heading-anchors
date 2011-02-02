@@ -14,12 +14,11 @@ window.HeadingAnchors = {
         if ( document.querySelectorAll ) {
             
             var $ = function( selector ) {
-                var domElements   = document.querySelectorAll( selector ),
+                var elements      = document.querySelectorAll( selector ),
                     elementsArray = [];
-                var domElementCount = domElements.length,
-                    e = 0;
-                for (; e < domElementCount; e++) {
-                    elementsArray.push( domElements[e] );
+                
+                for (var l = elements.length, e = 0; e < l; e++) {
+                    elementsArray.push( elements[e] );
                 }
                 return elementsArray;
             };
