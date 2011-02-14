@@ -1,4 +1,3 @@
-
 Heading Anchors
 ===============
 
@@ -17,5 +16,5 @@ Features
 Usage
 -----
 1. Link to, or copy and paste the content of `heading-anchors.js` and `heading-anchors.css` anywhere in your JavaScript and CSS files.
-2. Call `HeadingAnchors.init()` on page load and pass it a selector string if the default `'h2, h3, h4, h5, h6'` doesn’t fit you needs.
+2. Call `HeadingAnchors.init()` on dom ready and pass it a selector string if the default `'h2, h3, h4, h5, h6'` doesn’t fit you needs.
 3. Tweet this URL: <http://github.com/rafBM/heading-anchors>. ☺
