@@ -17,9 +17,9 @@ window.HeadingAnchors = {
         var elements    = document.querySelectorAll( selector ),
           elementsArray = []
         
-        for (var l = elements.length, e = 0; e < l; e++) {
+        for (var l = elements.length, e = 0; e < l; e++)
           elementsArray.push( elements[e] )
-        }
+        
         return elementsArray
       }
       
@@ -29,11 +29,10 @@ window.HeadingAnchors = {
       
       var niceHeadings = {}, headingsSelector
       
-      if ( typeof customHeadingsSelector == "string" && customHeadingsSelector.length ) {
+      if ( typeof customHeadingsSelector == "string" && customHeadingsSelector.length )
         headingsSelector = customHeadingsSelector
-      } else {
+      else
         headingsSelector = 'h2, h3, h4, h5, h6'
-      }
       
       $( headingsSelector ).forEach(function( headingElement ) {
         
@@ -57,9 +56,8 @@ window.HeadingAnchors = {
       })
       
       var headingInHash = document.getElementById( window.location.hash.substr(1) )
-      if ( headingInHash ) {
+      if ( headingInHash )
         window.scrollTo( 0, headingInHash.offsetTop )
-      }
     
     }
   
