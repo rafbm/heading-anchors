@@ -17,7 +17,9 @@ a.heading-anchor {
   text-decoration: inherit;
   opacity: 0;
   margin-left: 0.3em;
+  visibility: hidden;
 }
-a.heading-anchor:after { content: '¶' }
-
-  a.heading-anchor > span { display: none }
+a.heading-anchor:before {
+  content: '¶';
+  visibility: visible;
+}

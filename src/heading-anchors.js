@@ -49,7 +49,7 @@ window.HeadingAnchors = {
           niceHeadings[ niceHeading ] = 2
         }
         
-        anchor.innerHTML = '<span>¶</span>'
+        anchor.innerHTML = '¶'
         headingElement.appendChild(anchor)
       })
       
