@@ -13,8 +13,8 @@ window.HeadingAnchors = {
     
     if (document.querySelectorAll) {
       var $ = function(selector) {
-        var elements    = document.querySelectorAll(selector),
-          elementsArray = []
+        var elements = document.querySelectorAll(selector)
+          , elementsArray = []
         
         for (var l = elements.length, e = 0; e < l; e++)
           elementsArray.push(elements[e])
@@ -34,8 +34,8 @@ window.HeadingAnchors = {
         headingsSelector = 'h2, h3, h4, h5, h6'
       
       $(headingsSelector).forEach(function(headingElement) {
-        var anchor    = document.createElement('a'),
-          niceHeading = nice(headingElement.id ? headingElement.id : headingElement.innerHTML.replace(/<([^ ]+)[^<>]*>([^<>]*)<\/\1>/ig, '$2'))
+        var anchor = document.createElement('a')
+          , niceHeading = nice(headingElement.id ? headingElement.id : headingElement.innerHTML.replace(/<([^ ]+)[^<>]*>([^<>]*)<\/\1>/ig, '$2'))
         
         anchor.className = 'heading-anchor'
         
